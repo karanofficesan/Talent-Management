@@ -88,18 +88,18 @@ import {
         <div class="p-6 bg-white rounded-2xl border border-gray-200 dark:bg-white/[0.03] dark:border-gray-800">
           <h3 class="text-base font-semibold text-gray-800 dark:text-white mb-4">Brand Performance Sheet</h3>
           <div class="overflow-x-auto">
-            <table class="min-w-full text-xs">
+            <table class="min-w-full text-xs text-gray-700 dark:text-gray-300">
               <thead>
-                <tr class="border-b border-gray-150 dark:border-gray-800 text-gray-400 text-left font-bold">
+                <tr class="border-b border-gray-150 dark:border-gray-800 text-gray-500 dark:text-gray-400 text-left font-bold">
                   <th class="pb-2.5">Brand Name</th>
                   <th class="pb-2.5 text-center">Shoots</th>
                   <th class="pb-2.5 text-right">Revenue Generated</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-gray-50 dark:divide-gray-850">
+              <tbody class="divide-y divide-gray-50 dark:divide-gray-800">
                 @for (item of brandPerformances; track item.brandId) {
                   <tr>
-                    <td class="py-2.5 font-semibold text-gray-700 dark:text-gray-300">{{ item.name }}</td>
+                    <td class="py-2.5 font-semibold text-gray-800 dark:text-gray-200">{{ item.name }}</td>
                     <td class="py-2.5 text-center">{{ item.shootCount }}</td>
                     <td class="py-2.5 text-right font-bold text-gray-800 dark:text-white">₹{{ item.revenue | number }}</td>
                   </tr>
@@ -115,19 +115,19 @@ import {
         <div class="p-6 bg-white rounded-2xl border border-gray-200 dark:bg-white/[0.03] dark:border-gray-800">
           <h3 class="text-base font-semibold text-gray-800 dark:text-white mb-4">Nationality Day-Rate Margin Breakdown</h3>
           <div class="overflow-x-auto">
-            <table class="min-w-full text-xs">
+            <table class="min-w-full text-xs text-gray-700 dark:text-gray-300">
               <thead>
-                <tr class="border-b border-gray-150 dark:border-gray-800 text-gray-400 text-left font-bold">
+                <tr class="border-b border-gray-150 dark:border-gray-800 text-gray-500 dark:text-gray-400 text-left font-bold">
                   <th class="pb-2.5">Nationality Group</th>
                   <th class="pb-2.5 text-center">Models Count</th>
                   <th class="pb-2.5 text-right">Avg Day Rate</th>
                   <th class="pb-2.5 text-right">Highest Day Rate</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-gray-50 dark:divide-gray-850">
+              <tbody class="divide-y divide-gray-50 dark:divide-gray-800">
                 @for (item of nationalityBreakdowns; track item.nationality) {
                   <tr>
-                    <td class="py-2.5 font-semibold text-gray-700 dark:text-gray-300">{{ item.nationality }}</td>
+                    <td class="py-2.5 font-semibold text-gray-800 dark:text-gray-200">{{ item.nationality }}</td>
                     <td class="py-2.5 text-center">{{ item.count }} Models</td>
                     <td class="py-2.5 text-right font-medium">₹{{ item.avgRate | number:'1.0-0' }}</td>
                     <td class="py-2.5 text-right font-bold text-indigo-500">₹{{ item.highestRate | number }}</td>

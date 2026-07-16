@@ -6,6 +6,7 @@ import { Subscription } from 'rxjs';
 import { PageBreadcrumbComponent } from '../../../shared/components/common/page-breadcrumb/page-breadcrumb.component';
 import { ModalComponent } from '../../../shared/components/ui/modal/modal.component';
 import { BadgeComponent } from '../../../shared/components/ui/badge/badge.component';
+import { ButtonComponent } from '../../../shared/components/ui/button/button.component';
 
 import {
   CrmStorageService,
@@ -23,7 +24,8 @@ import {
     FormsModule,
     PageBreadcrumbComponent,
     ModalComponent,
-    BadgeComponent
+    BadgeComponent,
+    ButtonComponent
   ],
   template: `
     <div class="space-y-6">
@@ -370,10 +372,14 @@ import {
           </div>
 
           <div class="border-t border-gray-100 dark:border-gray-800 pt-4 flex gap-2">
-            <button (click)="toggleBulkSelect(previewModel.id)" class="w-1/2 px-4 py-2 text-xs font-semibold border rounded-lg hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-              {{ selectedModelIds.has(previewModel.id) ? 'Deselect Model' : 'Select Model' }}
-            </button>
-            <button (click)="previewModel = null" class="w-1/2 px-4 py-2 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg">Done</button>
+            <div class="flex-1">
+              <app-button variant="outline" size="sm" className="w-full" (btnClick)="toggleBulkSelect(previewModel.id)">
+                {{ selectedModelIds.has(previewModel.id) ? 'Deselect Model' : 'Select Model' }}
+              </app-button>
+            </div>
+            <div class="flex-1">
+              <app-button variant="primary" size="sm" className="w-full" (btnClick)="previewModel = null">Done</app-button>
+            </div>
           </div>
         </div>
       }

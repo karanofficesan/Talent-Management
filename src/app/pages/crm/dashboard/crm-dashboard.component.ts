@@ -266,18 +266,18 @@ import {
         <div class="p-6 bg-white rounded-2xl border border-gray-200 dark:bg-white/[0.03] dark:border-gray-800">
           <h3 class="text-base font-semibold text-gray-800 dark:text-white mb-4">Customer Outstanding</h3>
           <div class="overflow-x-auto">
-            <table class="min-w-full text-xs">
+            <table class="min-w-full text-xs text-gray-700 dark:text-gray-300">
               <thead>
-                <tr class="border-b border-gray-100 dark:border-gray-800 text-gray-400 text-left">
+                <tr class="border-b border-gray-100 dark:border-gray-800 text-gray-500 dark:text-gray-400 text-left">
                   <th class="pb-2 font-medium">Customer</th>
                   <th class="pb-2 font-medium">Active Invoices</th>
                   <th class="pb-2 font-medium text-right">Outstanding Amount</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-gray-50 dark:divide-gray-850">
+              <tbody class="divide-y divide-gray-50 dark:divide-gray-800">
                 @for (c of customerOuts; track c.id) {
                   <tr>
-                    <td class="py-2.5 font-medium text-gray-700 dark:text-gray-300">{{ c.name }}</td>
+                    <td class="py-2.5 font-semibold text-gray-800 dark:text-gray-200">{{ c.name }}</td>
                     <td class="py-2.5">{{ c.invoiceCount }} Invoices</td>
                     <td class="py-2.5 text-right font-bold text-red-500">₹{{ c.outstanding | number:'1.0-0' }}</td>
                   </tr>
@@ -293,18 +293,18 @@ import {
         <div class="p-6 bg-white rounded-2xl border border-gray-200 dark:bg-white/[0.03] dark:border-gray-800">
           <h3 class="text-base font-semibold text-gray-800 dark:text-white mb-4">Vendor Outstanding Summary</h3>
           <div class="overflow-x-auto">
-            <table class="min-w-full text-xs">
+            <table class="min-w-full text-xs text-gray-700 dark:text-gray-300">
               <thead>
-                <tr class="border-b border-gray-100 dark:border-gray-800 text-gray-400 text-left">
+                <tr class="border-b border-gray-100 dark:border-gray-800 text-gray-500 dark:text-gray-400 text-left">
                   <th class="pb-2 font-medium">Vendor</th>
                   <th class="pb-2 font-medium">Details</th>
                   <th class="pb-2 font-medium text-right">Pending Payouts</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-gray-50 dark:divide-gray-850">
+              <tbody class="divide-y divide-gray-50 dark:divide-gray-800">
                 @for (v of vendorOuts; track v.id) {
                   <tr>
-                    <td class="py-2.5 font-medium text-gray-700 dark:text-gray-300">{{ v.name }}</td>
+                    <td class="py-2.5 font-semibold text-gray-800 dark:text-gray-200">{{ v.name }}</td>
                     <td class="py-2.5">{{ v.role }}</td>
                     <td class="py-2.5 text-right font-bold text-amber-600">₹{{ v.pending | number:'1.0-0' }}</td>
                   </tr>

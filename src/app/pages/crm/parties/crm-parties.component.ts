@@ -198,9 +198,9 @@ import {
               <!-- Tab Contents -->
               @if (activeTab === 'ledger') {
                 <div class="overflow-x-auto">
-                  <table class="min-w-full text-xs">
+                  <table class="min-w-full text-xs text-gray-700 dark:text-gray-300">
                     <thead>
-                      <tr class="border-b border-gray-100 dark:border-gray-800 text-gray-400 text-left">
+                      <tr class="border-b border-gray-100 dark:border-gray-800 text-gray-500 dark:text-gray-400 text-left">
                         <th class="pb-2">Date</th>
                         <th class="pb-2">Transaction Details</th>
                         <th class="pb-2 text-right">Debit (Invoiced)</th>
@@ -208,7 +208,7 @@ import {
                         <th class="pb-2 text-right">Balance</th>
                       </tr>
                     </thead>
-                    <tbody class="divide-y divide-gray-50 dark:divide-gray-850">
+                      <tbody class="divide-y divide-gray-50 dark:divide-gray-800">
                       @for (row of partyLedger; track row.id) {
                         <tr>
                           <td class="py-2">{{ row.date | date:'shortDate' }}</td>
@@ -227,9 +227,9 @@ import {
 
               @if (activeTab === 'bookings') {
                 <div class="overflow-x-auto">
-                  <table class="min-w-full text-xs">
+                  <table class="min-w-full text-xs text-gray-700 dark:text-gray-300">
                     <thead>
-                      <tr class="border-b border-gray-100 dark:border-gray-800 text-gray-400 text-left">
+                      <tr class="border-b border-gray-100 dark:border-gray-800 text-gray-500 dark:text-gray-400 text-left">
                         <th class="pb-2">Booking No</th>
                         <th class="pb-2">Date</th>
                         <th class="pb-2">Shoot Details</th>
@@ -237,7 +237,7 @@ import {
                         <th class="pb-2">Status</th>
                       </tr>
                     </thead>
-                    <tbody class="divide-y divide-gray-50 dark:divide-gray-850">
+                    <tbody class="divide-y divide-gray-50 dark:divide-gray-800">
                       @for (b of partyBookings; track b.id) {
                         <tr>
                           <td class="py-2 font-bold">{{ b.bookingNo }}</td>
@@ -258,9 +258,9 @@ import {
 
               @if (activeTab === 'invoices') {
                 <div class="overflow-x-auto">
-                  <table class="min-w-full text-xs">
+                  <table class="min-w-full text-xs text-gray-700 dark:text-gray-300">
                     <thead>
-                      <tr class="border-b border-gray-100 dark:border-gray-800 text-gray-400 text-left">
+                      <tr class="border-b border-gray-100 dark:border-gray-800 text-gray-500 dark:text-gray-400 text-left">
                         <th class="pb-2">Invoice No</th>
                         <th class="pb-2">Date</th>
                         <th class="pb-2">Grand Total</th>
@@ -268,7 +268,7 @@ import {
                         <th class="pb-2">Status</th>
                       </tr>
                     </thead>
-                    <tbody class="divide-y divide-gray-50 dark:divide-gray-850">
+                    <tbody class="divide-y divide-gray-50 dark:divide-gray-800">
                       @for (i of partyInvoices; track i.id) {
                         <tr>
                           <td class="py-2 font-bold">{{ i.invoiceNo }}</td>
@@ -289,9 +289,9 @@ import {
 
               @if (activeTab === 'payments') {
                 <div class="overflow-x-auto">
-                  <table class="min-w-full text-xs">
+                  <table class="min-w-full text-xs text-gray-700 dark:text-gray-300">
                     <thead>
-                      <tr class="border-b border-gray-100 dark:border-gray-800 text-gray-400 text-left">
+                      <tr class="border-b border-gray-100 dark:border-gray-800 text-gray-500 dark:text-gray-400 text-left">
                         <th class="pb-2">TXN Reference</th>
                         <th class="pb-2">Date</th>
                         <th class="pb-2">Mode</th>
@@ -299,7 +299,7 @@ import {
                         <th class="pb-2">TDS Deducted</th>
                       </tr>
                     </thead>
-                    <tbody class="divide-y divide-gray-50 dark:divide-gray-850">
+                    <tbody class="divide-y divide-gray-50 dark:divide-gray-800">
                       @for (p of partyPayments; track p.id) {
                         <tr>
                           <td class="py-2 font-bold">{{ p.reference }}</td>
