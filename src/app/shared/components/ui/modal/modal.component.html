@@ -4,13 +4,13 @@
   <!-- Backdrop -->
   @if (!isFullscreen) {
   <div
-    class="fixed inset-0 h-full w-full bg-gray-400/50 backdrop-blur-[32px]"
+    class="fixed inset-0 h-full w-full bg-gray-900/40 backdrop-blur-[4px]"
     (click)="onBackdropClick($event)"
   ></div>
   }
   <!-- Modal Content -->
   <div
-    [ngClass]="isFullscreen ? 'w-full h-full' : 'relative w-full rounded-3xl bg-white dark:bg-gray-900'"
+    [ngClass]="isFullscreen ? 'w-full h-full' : 'relative w-[92%] max-w-3xl mx-auto rounded-3xl bg-white dark:bg-gray-900 shadow-2xl transition-all duration-300'"
     [class]="className"
     (click)="onContentClick($event)"
   >
