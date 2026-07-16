@@ -138,7 +138,7 @@ import {
                 <!-- Agency Header -->
                 <div class="flex justify-between items-start border-b border-gray-100 pb-5">
                   <div>
-                    <h2 class="text-xl font-bold text-blue-600">ANTIGRAVITY TALENT LTD</h2>
+                    <h2 class="text-xl font-bold text-blue-600">TALENT LTD</h2>
                     <p class="text-xs text-gray-500 mt-1">102 Fashion Boulevard, Bandra West, Mumbai - 400050<br>GSTIN: 27AAAAA1111A1Z1 | contact&#64;antigravity.co</p>
                   </div>
                   <div class="text-right">
